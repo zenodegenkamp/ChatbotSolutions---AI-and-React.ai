@@ -10,6 +10,9 @@ const openai = new OpenAI({
 
 
 export default async function FetchChatBot(converstationStr) {
+
+  const url 
+
   try {
     const completion = await openai.completions.create({
       model: "davinci:ft-personal-2023-08-25-09-01-18",
