@@ -23,6 +23,7 @@ export default async function FetchChatBot(converstationStr) {
   const data = await response.json()
   console.log(data)
 
+  return completion.reply.choices[0].text;
   // try {
   //   const completion = await openai.completions.create({
   //     model: "davinci:ft-personal-2023-08-25-09-01-18",
@@ -34,7 +35,7 @@ export default async function FetchChatBot(converstationStr) {
   //     stop: ['\n', '->']
   //   })
 
-  //   return completion.choices[0].text;
+  //   return completion.reply.choices[0].text;
   // } catch (error) {
   //   console.error("Error fetching chatbot response:", error);
   //   return "Error fetching response";
